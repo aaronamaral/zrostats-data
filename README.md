@@ -1,5 +1,7 @@
 # Hosted LayerZero Scan compatibility collector
 
+**Closed compatibility test (4 November 2026).** [The hosted run](https://github.com/aaronamaral/zrostats-data/actions/runs/41842771015) ended with a browser challenge. This repository is not a production data feed and has no scheduled workflow. ZroStats uses a separate Vercel job and hosted JSON reader instead.
+
 This repository tests whether a fresh, ordinary Chromium session on a GitHub-hosted Ubuntu runner can read LayerZero Scan's public dashboard JSON. It does not require a running local computer, Codex session, Scan account, or secret. A successful hosted run must be observed before describing this as an operational feed.
 
 The initial workflow is **manual only** (`workflow_dispatch`). It has `contents: read`, a five-minute job timeout, and uploads a validated `data/latest.json` artifact on success. It does not commit data, publish a feed, deploy an app, or create a schedule. Run **Check hosted Scan collection** from the repository's Actions page to perform the cloud compatibility test.
